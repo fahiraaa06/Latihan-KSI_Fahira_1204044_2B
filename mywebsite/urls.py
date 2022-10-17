@@ -13,19 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 from django.http import HttpResponse
 
 from . import views
 
-# views dalam file urls
-# def index(request):
-#     return HttpResponse("Hello World")
+def index (request) :
+    return HttpResponse('Hello World !')
 
 urlpatterns = [
     path('apk/', include('apk.urls')),
-    path('', views.index),
-    path('recent/', views.recent),
-    # path('',index)
+    path ('', views.index),
+    path('about/',views.about),
 ]

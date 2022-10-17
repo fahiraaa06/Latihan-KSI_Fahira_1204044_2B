@@ -4,5 +4,5 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'index.html')
 
-def recent(request):
-    return HttpResponse("RECENT")
+def about(request):
+    return HttpResponse("About")

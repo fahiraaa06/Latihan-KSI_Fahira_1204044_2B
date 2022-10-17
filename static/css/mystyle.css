@@ -1,0 +1,24 @@
+.h1_first{
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.h1_second{
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.h2_first{
+    color: purple;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.h3_first{
+    color: aquamarine;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.pict{
+    height: 500px;
+    width: 1000px;
+}

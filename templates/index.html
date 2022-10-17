@@ -1,12 +1,51 @@
+{%load static%}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-   <h2>Buku Tutorial Django Python</h2> 
-</body>
+    <head> 
+        <meta charset="UTF-8">
+        <meta http-equip="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <!--CSS-->
+        <link rel="stylesheet" href ="{% static 'css/mystyle.css'%}">
+        <!--CSS BOOTSTRAP-->
+        <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+    </head>
+    <body>
+        <h1 class="h1_first">Hi, This's new project by 1204044_FAHIRA</h1>
+        <h1 class="h1_second">This is a picture of bridge</h1>
+        <h2 class="h2_first">Django was created in the fall of 2003</h2>
+        <h3 class="h3_first">Django is a lightweight and standalone web server for development and testing</h3>
+        <a href="https://www.djangoproject.com/">Now Lets Roll!!</a>
+        <br> 
+        <br>
+       <center><img class="pict" src="{% static 'blog/img/bridge.jpg'%}" alt=""></center>   
+        
+
+
+
+          <!-- <div id="menu">
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/apk/">Apk</a></li>
+            </ul>
+        </div>       -->
+        <!-- {% include "snippets/navbar.html"%}
+        {%block header%}
+        <h2 class="display-4">Heading Extends</h2>
+        <p class="lead">Subheading Extends</p>
+        {% endblock header %} -->
+        <!-- <div class="jumbotron">
+            <h1 class="display-4">Hai Fahira</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div -->
+        <!-- JS BOOTSTRAP-->
+        <script src="{% static 'vendor/bootsrap/bootstrap.js'%}" type="text/javascript"></script>
+        <script src="{% static 'vendor/bootsrap/jquery.slim.min.js'%}" type="text/javascript"></script>
+        <script src="{% static 'vendor/bootsrap/popper.min.js'%}" type="text/javascript"></script>
+    </body>
 </html>
