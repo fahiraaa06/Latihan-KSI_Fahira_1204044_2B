@@ -24,6 +24,7 @@ def index (request) :
     return HttpResponse('Hello World !')
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('apk/', include('apk.urls')),
     path ('', views.index),
     path('about/',views.about),

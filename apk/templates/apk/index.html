@@ -2,21 +2,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> 
-    <title>Blog</title>
+    <title>Apk</title>
     <!--CSS-->
     <link rel="stylesheet" href ="{% static 'css/style.css'%}">
     <!--CSS BOOTSTRAP-->
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+
+    <style>
+      .bgimg {
+        background-image: url("{% static 'apk/img/bridge.jpg' %}");
+        background-size: 1800px 900px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-attachment: fixed;
+      }
+
+      h1 {
+    color: aquamarine;
+ }
+
+
+
+ p{
+  color: white;
+ }
+    </style>
+
 </head>
-<body> 
-    <h2 align="center">Activity Blog</h2>
-    <div id="menu">
-        <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/apk/">Apk</a></li>
-        </ul> 
-    </div>
-    <img id="banner" src="{% static 'apk/img/bridge.jpg'%}" alt="">
+<body class="bgimg">
+  {% block content-1 %}
+  {% for v in post %}
+  <div>
+    <h1 align="center">Activity Apk</h1>
+    <h1>{{v.title}}</h1>
+    <p>{{v.body}}</p>
+  </div>
+  {% endfor %}
+  {% endblock content-1 %}
+    <!-- <img id="banner" src="{% static 'apk/img/bridge.jpg'%}" alt=""> -->
+  
 
     <!-- <div class="card">
         <div class="card-header">

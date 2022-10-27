@@ -1,6 +1,9 @@
-body {
-    margin: 0;
-}
+/* body{
+    background-image:url('{{ STATIC_URL }}img/bridge.jpg');
+    background-repeat:no-repeat;
+    background-size:100%;
+} */
+
 #banner{
     width: 100%;
     float: left;
