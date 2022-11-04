@@ -15,7 +15,7 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from django.http import HttpResponse
 
 from . import views
@@ -25,7 +25,8 @@ def index (request) :
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('apk/', include('apk.urls')),
-    path ('', views.index),
-    path('about/',views.about),
+    path('apk/', include('apk.urls', namespace='apk')),
+    path ('', views.index, name='index'),
+    re_path(r'^articles/(?P<year>[0-9]{4})/$',
+    views.articles, name='dinamis'),
 ]

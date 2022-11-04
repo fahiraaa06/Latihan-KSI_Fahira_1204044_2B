@@ -13,18 +13,28 @@
         <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
     </head>
     <body>
-        <h1 class="h1_first">Hi, This's new project by 1204044_FAHIRA</h1>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "index" %}" title="">home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "apk:index" %}" title="">Apk
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "dinamis" year="2020" %}" title="">2020
+                </a>
+            </li>
+        </ul>
+        <!-- <h1 class="h1_first">Hi, This's new project by 1204044_FAHIRA</h1>
         <h1 class="h1_second">This is a picture of bridge</h1>
         <h2 class="h2_first">Django was created in the fall of 2003</h2>
         <h3 class="h3_first">Django is a lightweight and standalone web server for development and testing</h3>
         <a href="https://www.djangoproject.com/">Now Lets Roll!!</a>
         <br> 
         <br>
-       <center><img class="pict" src="{% static 'apk/img/bridge.jpg'%}" alt=""></center>   
-        
-
-
-
+       <center><img class="pict" src="{% static 'apk/img/bridge.jpg'%}" alt=""></center>    -->
           <!-- <div id="menu">
             <ul>
             <li><a href="/">Home</a></li>
