@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('apk/', include('apk.urls', namespace='apk')),
     path ('', views.index, name='index'),
+    path('form/', views.form, name='form'),
     re_path(r'^articles/(?P<year>[0-9]{4})/$',
     views.articles, name='dinamis'),
 ]

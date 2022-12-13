@@ -1,64 +1,70 @@
+{% extends 'base.html' %}
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <title>Apk</title>
-    <!--CSS-->
-    <link rel="stylesheet" href ="{% static 'css/style.css'%}">
-    <!--CSS BOOTSTRAP-->
-    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
 
-    <style>
-      .bgimg {
-        background-image: url("{% static 'apk/img/bridge.jpg' %}");
-        background-size: 1800px 900px;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-attachment: fixed;
-      }
-
-      h1 {
-    color: aquamarine;
- }
-
-
-
- p{
-  color: white;
- }
-    </style>
-
+<head>
+  <title>Apk</title>
+  <!--CSS-->
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <!--CSS BOOTSTRAP-->
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
 </head>
-<body class="bgimg">
-  {% block content-1 %}
-  {% for v in post %}
-  <div>
-    <h1 align="center">Activity Apk</h1>
-    <h1>{{v.title}}</h1>
-    <p>{{v.body}}</p>
+
+<body>
+  <div id="menu">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/apk/">Apk</a></li>
+      <li><a href="/form/">Form</a></li>
+    </ul>
   </div>
+  <br>
+  <br>
+  <h2 align="center">Halaman Apk</h2>
+  {% block page_title %}
+  {{page_title}}
+  {% endblock page_title %}
+
+  {% block contents %}
+  <h1>{{page_title}}</h1>
+
+  {% for post in posts %}
+  <h1>{{post.judul}}</h1>
+  <h2>{{post.body}}</h2>
+  <h2>{{post.category}}</h2>
   {% endfor %}
-  {% endblock content-1 %}
-    <!-- <img id="banner" src="{% static 'apk/img/bridge.jpg'%}" alt=""> -->
-  
 
-    <!-- <div class="card">
-        <div class="card-header">
-          Quote
-        </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-            <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-          </blockquote>
-        </div>
-      </div> -->
+  {% endblock contents %}
+  <img id="banner" src="{% static 'apk/img/bridge.jpg'%}" alt="">
+
+  <div class="card">
+    <div class="card-header">
+      Postingan
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>
+          {% block content-1 %}
+          {% for v in post %}
+
+          <h1>{{v.title}}</h1>
+          <p>{{v.body}}</p>
+
+          {% endfor %}
+          {% endblock content-1 %}
+        </p>
+        <footer class="blockquote-footer">Fahira <cite title="Source Title"></cite></footer>
+      </blockquote>
+    </div>
+  </div>
 
 
-    <!-- JS BOOTSTRAP-->
-    <script src="{% static 'vendor/bootsrap/bootstrap.js'%}" type="text/javascript"></script>
-    <script src="{% static 'vendor/bootsrap/jquery.slim.min.js'%}" type="text/javascript"></script>
-    <script src="{% static 'vendor/bootsrap/popper.min.js'%}" type="text/javascript"></script>
+  <!-- JS BOOTSTRAP-->
+  <script src="{% static 'vendor/bootsrap/bootstrap.js'%}" type="text/javascript"></script>
+  <script src="{% static 'vendor/bootsrap/jquery.slim.min.js'%}" type="text/javascript"></script>
+  <script src="{% static 'vendor/bootsrap/popper.min.js'%}" type="text/javascript"></script>
 
 </body>
+
 </html>
